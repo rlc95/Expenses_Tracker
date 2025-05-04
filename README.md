@@ -29,7 +29,7 @@ DB_DATABASE='expense_tracker'
  php artisan serve
 
 # Open your Browser and Navigate to:
- http://localhost:8000
+ http://localhost:8000/expense
 
 # POST API 
 http://127.0.0.1:8000/api/expenses      # route/api.php file is not in laravel project so unable to check on postman
