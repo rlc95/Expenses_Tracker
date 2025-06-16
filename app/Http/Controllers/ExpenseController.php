@@ -107,7 +107,11 @@ class ExpenseController extends Controller
     
     
         }catch(Exception $e){
+<<<<<<< HEAD
             dd($e);
+=======
+            
+>>>>>>> f0639db (updated task)
             return response()->json([
                 'status' => 'Unsuccess',
                 'message' => 'Expense created Usuccessfully',

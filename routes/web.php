@@ -23,8 +23,16 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('expense', [ExpenseController::class, 'userHome'])->name('frontpage');
-Route::get('api/expense/daily-summary', [ExpenseController::class, 'userdatas']);
-Route::post('api/expenses', [ExpenseController::class, 'userStore']);
+
 Route::get('userlist', [ExpenseController::class, 'usrlist'])->name('userlist');
+
+
+Route::prefix('api')->middleware('api')->group(function () {
+    Route::get('/expense/daily-summary', [ExpenseController::class, 'userdatas']);
+    Route::post('/expenses', [ExpenseController::class, 'userStore']);
+
+});
+
+
 
 require __DIR__.'/auth.php'; 
